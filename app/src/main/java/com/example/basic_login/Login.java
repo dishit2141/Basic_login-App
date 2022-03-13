@@ -49,8 +49,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             }
             Toast.makeText(Login.this,"Login Successful Welcome to the App", Toast.LENGTH_SHORT).show();
             Intent next = new Intent(Login.this, MainActivity.class);
-            String uname = etUserName.getText().toString();
-            next.putExtra("LoggedInUsername",etUserName.getText().toString().equals(uname));
+            next.putExtra("data",etUserName.getText().toString());
             Login.this.startActivity(next);
 
         }
